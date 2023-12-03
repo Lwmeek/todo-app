@@ -3,24 +3,24 @@
 @tailwind utilities;
 
 :root {
-  /* Colors */
+	/* Colors */
 	--clr-Bright-Blue: hsl(220, 98%, 61%);
 	--clr-Check-Background: linear-gradient hsl(192, 100%, 67%) to
 		hsl(280, 87%, 65%);
-    /* Light Theme */
+	/* Light Theme */
 	--clr-Very-Light-Gray: hsl(0, 0%, 98%);
 	--clr-Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
-	--clr-Light-Grayish-Blue: hsl(233, 11%, 84%);
-	--clr-Dark-Grayish-Blue: hsl(236, 9%, 61%);
-	--clr-Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
-  /* Dark Theme */
+	--clr-Light-Grayish-Blue-1: hsl(233, 11%, 84%);
+	--clr-Dark-Grayish-Blue-1: hsl(236, 9%, 61%);
+	--clr-Very-Dark-Grayish-Blue-1: hsl(235, 19%, 35%);
+	/* Dark Theme */
 	--clr-Very-Dark-Blue: hsl(235, 21%, 11%);
 	--clr-Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
-	--clr-Light-Grayish-Blue: hsl(234, 39%, 85%);
-	--clr-Light-Grayish-Blue/*hover*/: hsl(236, 33%, 92%);
-	--clr-Dark-Grayish-Blue: hsl(234, 11%, 52%);
-	--clr-Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
-	--clr-Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+	--clr-Light-Grayish-Blue-2: hsl(234, 39%, 85%);
+	--clr-Light-Grayish-Blue-hover/*hover*/: hsl(236, 33%, 92%);
+	--clr-Dark-Grayish-Blue-2: hsl(234, 11%, 52%);
+	--clr-Very-Dark-Grayish-Blue-2: hsl(233, 14%, 35%);
+	--clr-Very-Dark-Grayish-Blue-3: hsl(237, 14%, 26%);
 }
 
 /* Global Styles */
@@ -36,4 +36,12 @@
 /* Genral Styles */
 body {
 	font-size: 1.13rem;
+}
+
+.tabs-item {
+	font-weight: 700;
+	color: var(--clr-Dark-Grayish-Blue-1);
+}
+.active {
+	color: var(--clr-Bright-Blue);
 }

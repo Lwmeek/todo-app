@@ -1,49 +1,37 @@
-import React from "react";
-import { Checkbox, Tabs, Tab } from "@nextui-org/react";
+import React, { useState } from "react";
+import { Checkbox } from "@nextui-org/react";
 
 const TodoList = () => {
+	const [active, setActive] = useState(0);
+	const handleActive = (id) => {
+		setActive(id);
+	};
 	return (
 		<div className="flex gap-4">
 			<Checkbox lineThrough radius="full" size="lg">
 				Create a new todo...
 			</Checkbox>
-			<div className="flex w-full flex-col">
-				<Tabs
-					aria-label="Options"
-					color="primary"
-					classNames={{
-						tabList:
-							"gap-6 w-full relative rounded-none p-0 border-b border-divider",
-						cursor: "w-full bg-[#22d3ee]",
-						tab: "max-w-fit px-0 h-12",
-						tabContent: "group-data-[selected=true]:text-[var(--clr-Bright-Blue)]",
-					}}
-				>
-					<Tab
-						key="all"
-						title={
-							<div className="flex items-center space-x-2">
-								<span className="font-bold">All</span>
-							</div>
-						}
-					/>
-					<Tab
-						key="active"
-						title={
-							<div className="flex items-center space-x-2">
-								<span className="font-bold">Active</span>
-							</div>
-						}
-					/>
-					<Tab
-						key="completed"
-						title={
-							<div className="flex items-center space-x-2">
-								<span className="font-bold">Completed</span>
-							</div>
-						}
-					/>
-				</Tabs>
+			<div className="tabs">
+				<ul>
+					<li
+						className={`tabs-item ${active === 1 ? "active" : ""}`}
+						onClick={() => handleActive(1)}
+					>
+						All
+					</li>
+					<li
+						className={`tabs-item ${active === 2 ? "active" : ""}`}
+						onClick={() => handleActive(2)}
+					>
+						Active
+					</li>
+					<li
+						className={`tabs-item ${active === 3 ? "active" : ""}`}
+						onClick={() => handleActive(3)}
+					>
+						Completed
+					</li>
+				</ul>
 			</div>
 		</div>
 	);
