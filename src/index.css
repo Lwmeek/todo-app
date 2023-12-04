@@ -38,10 +38,36 @@ body {
 	font-size: 1.13rem;
 }
 
+/* Tabs Styles */
 .tabs-item {
 	font-weight: 700;
 	color: var(--clr-Dark-Grayish-Blue-1);
 }
+.tabs-item:hover {
+	cursor: pointer;
+}
 .active {
 	color: var(--clr-Bright-Blue);
+}
+
+.flex img {
+	width: 0.8rem;
+	height: 0.8rem;
+}
+.tasks-item {
+	border-bottom: 1.8px solid var(--clr-Very-Light-Grayish-Blue);
+	padding: 1rem;
+	color: var(--clr-Dark-Grayish-Blue-1);
+}
+.tasks-item p {
+	color: var(--clr-Dark-Grayish-Blue-1);
+}
+.tasks {
+	color: var(--clr-Dark-Grayish-Blue-1);
+}
+.line {
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: var(--clr-Bright-Blue);
 }
